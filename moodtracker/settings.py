@@ -42,7 +42,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "moodchooser",
     # "suggestions",
-    # "home",
+    "home",
 ]
 
 MIDDLEWARE = [
