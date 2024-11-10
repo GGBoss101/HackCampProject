@@ -2,7 +2,9 @@ body {
     background-image: url('../../static/homeBG.png');
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-size: cover;
+    background-size: 393px 852px;
+    background-position: center;
+    padding-top: 50px;
 }
 
 .buttonAlign {
