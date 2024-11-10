@@ -1,0 +1,33 @@
+.buttonAlign {
+    text-align: center;
+}
+
+.block {
+    display: flex;
+    height: 75px;
+    width: 210px;
+    background-color: #F1E4C9;
+    border-radius: 8px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+}
+.innerBlock {
+    height: 65px;
+    width: 75px;
+    background-color: #86A789;
+    border-radius: 8px;
+    margin-left: 5px;
+    text-align: center;
+}
+
+.blockText {
+    font-family: "Dangrek";
+    margin: 18px;
+    font-size: 20px;
+}
+
+.image {
+    margin-left: 34px;
+}
