@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+    {% load static %}
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,71 +9,74 @@
     <link href='https://fonts.googleapis.com/css?family=Mada' rel='stylesheet'>
     <title>Home</title>
 </head>
-<body>
+<body> 
     <div class = "block">
         <div class = "innerBlock">
             <p class = "blockText">MON</p>
         </div>
-        <img class = "image" data-mood = "H" src = "../../static/Angry.svg">
+        <img class = "image" src = "" data-mood="{{ moods.MON }}">
     </div>
     <div class = "block">
         <div class = "innerBlock">
-            <p class = "blockText">TUE</p>
+            <p class = "blockText" >TUE</p>
         </div>
-        <img class = "image" data-mood = "T" src = "../../static/Angry.svg">
+        <img class = "image" src = "" data-mood="{{ moods.TUE }}">
     </div>
     <div class = "block">
         <div class = "innerBlock">
             <p class = "blockText">WED</p>
         </div>
-        <img class = "image" data-mood = "C" src = "../../static/Angry.svg">
+        <img class = "image" src = "" data-mood="{{ moods.WED }}">
     </div>
     <div class = "block">
         <div class = "innerBlock">
             <p class = "blockText">THU</p>
         </div>
-        <img class = "image" data-mood = "S" src = "../../static/Angry.svg">
+        <img class = "image" src = "" data-mood="{{ moods.THU }}">
     </div>
     <div class = "block">
         <div class = "innerBlock">
             <p class = "blockText">FRI</p>
         </div>
-        <img class = "image" data-mood = "A" src = "../../static/Angry.svg">
+        <img class = "image" src = "" data-mood="{{ moods.FRI }}">
     </div>
     <div class = "block">
         <div class = "innerBlock">
             <p class = "blockText">SAT</p>
         </div>
-        <img class = "image" data-mood = "H"src = "../../static/Angry.svg">
+        <img class = "image" src = "" data-mood="{{ moods.SAT }}">
     </div>
     <div class = "block">
         <div class = "innerBlock">
             <p class = "blockText">SUN</p>
         </div>
-        <img class = "image" src = "../../static/Angry.svg">
+        <img class = "image" src = "" data-mood="{{ moods.SUN }}" >
     </div>
 <div style = "text-align: center;">
     <button><p class = "buttonText" onclick = "changePic()">LOG TODAY'S MOOD</p></button>
 </div>
+
 <script>
-function changePic() {
-    images = document.getElementsByClassName("image");
-    for (i = 0; i < 7; i++) {
-        if (images[i].dataset.mood == "H") {
-            images[i].src = "../../static/Happy.svg";
-        } else if (images[i].dataset.mood == "S") {
-            images[i].src = "../../static/Sad.svg";
-        } else if (images[i].dataset.mood == "C") {
-            images[i].src = "../../static/Content.svg";
-        } else if (images[i].dataset.mood == "T") {
-            images[i].src = "../../static/Stressed.svg";
-        } else if (images[i].dataset.mood == "A") {
-            images[i].sec = "../../static/Angry.svg";
-        } else {
-            images[i].style.visibility = "hidden";
+    function changePic() {
+        images = document.getElementsByClassName("image");
+        for (i = 0; i < 7; i++) {
+            if (images[i].dataset.mood == "H") {
+                images[i].src = "{% static 'Happy.svg' %}";
+            } else if (images[i].dataset.mood == "S") {
+                images[i].src = "{% static 'Sad.svg' %}";
+            } else if (images[i].dataset.mood == "C") {
+                images[i].src = "{% static 'Content.svg' %}";
+            } else if (images[i].dataset.mood == "T") {
+                images[i].src = "{% static 'Stressed.svg' %}";
+            } else if (images[i].dataset.mood == "A") {
+                images[i].src = "{% static 'Angry.svg' %}";
+            } else {
+                images[i].style.visibility = "hidden";
+            }
         }
     }
-}
-</script>
+    </script>
+    </body>
+    </html>
 </body>
 </html>
