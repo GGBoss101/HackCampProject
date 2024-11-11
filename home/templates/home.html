@@ -13,37 +13,37 @@
         <div class = "innerBlock">
             <p class = "blockText">MON</p>
         </div>
-        <img class = "image" src = "../../static/Angry.svg">
+        <img class = "image" data-mood = "H" src = "../../static/Angry.svg">
     </div>
     <div class = "block">
         <div class = "innerBlock">
             <p class = "blockText">TUE</p>
         </div>
-        <img class = "image" src = "../../static/Angry.svg">
+        <img class = "image" data-mood = "T" src = "../../static/Angry.svg">
     </div>
     <div class = "block">
         <div class = "innerBlock">
             <p class = "blockText">WED</p>
         </div>
-        <img class = "image" src = "../../static/Angry.svg">
+        <img class = "image" data-mood = "C" src = "../../static/Angry.svg">
     </div>
     <div class = "block">
         <div class = "innerBlock">
             <p class = "blockText">THU</p>
         </div>
-        <img class = "image" src = "../../static/Angry.svg">
+        <img class = "image" data-mood = "S" src = "../../static/Angry.svg">
     </div>
     <div class = "block">
         <div class = "innerBlock">
             <p class = "blockText">FRI</p>
         </div>
-        <img class = "image" src = "../../static/Angry.svg">
+        <img class = "image" data-mood = "A" src = "../../static/Angry.svg">
     </div>
     <div class = "block">
         <div class = "innerBlock">
             <p class = "blockText">SAT</p>
         </div>
-        <img class = "image" src = "../../static/Angry.svg">
+        <img class = "image" data-mood = "H"src = "../../static/Angry.svg">
     </div>
     <div class = "block">
         <div class = "innerBlock">
@@ -52,7 +52,27 @@
         <img class = "image" src = "../../static/Angry.svg">
     </div>
 <div style = "text-align: center;">
-    <button><p class = "buttonText">LOG TODAY'S MOOD</p></button>
+    <button><p class = "buttonText" onclick = "changePic()">LOG TODAY'S MOOD</p></button>
 </div>
+<script>
+function changePic() {
+    images = document.getElementsByClassName("image");
+    for (i = 0; i < 7; i++) {
+        if (images[i].dataset.mood == "H") {
+            images[i].src = "../../static/Happy.svg";
+        } else if (images[i].dataset.mood == "S") {
+            images[i].src = "../../static/Sad.svg";
+        } else if (images[i].dataset.mood == "C") {
+            images[i].src = "../../static/Content.svg";
+        } else if (images[i].dataset.mood == "T") {
+            images[i].src = "../../static/Stressed.svg";
+        } else if (images[i].dataset.mood == "A") {
+            images[i].sec = "../../static/Angry.svg";
+        } else {
+            images[i].style.visibility = "hidden";
+        }
+    }
+}
+</script>
 </body>
 </html>
