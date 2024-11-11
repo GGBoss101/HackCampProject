@@ -1,0 +1,65 @@
+body {
+    color: #283F2B;
+    background-image: url('../../static/infoBG.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 393px 852px;
+    background-position: center;
+}
+
+
+h2 {
+    text-align: center;
+    font-family: "Dangrek";
+    margin-top: 100px;
+    margin-bottom: 50px;
+    font-size: 20px;
+}
+
+.block {
+    display: flex;
+    height: 215px;
+    width: 333px;
+    background-color: #D8E4B9;
+    border-radius: 45px;
+    margin-top: 80px;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+}
+
+.frame {
+    display: flex;
+    height: 220px;
+    width: 360px;
+
+    border-radius: 20px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+}
+
+.blockText {
+    text-align: center;
+    font-family: "Mada";
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 5cqb;
+    font-size: 20px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
