@@ -10,6 +10,5 @@ def home(response):
     for item in all_mood_entries:
         moods_by_day.update({item.date.strftime('%a').upper() : item.mood})
 
-
-
     return render(response, "home.html", {"moods":moods_by_day})
+
