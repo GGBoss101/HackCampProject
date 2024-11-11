@@ -1,0 +1,57 @@
+body {
+    color: #283F2B;
+    background-image: url('../../static/moodBG.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 393px 852px;
+    background-position: center;
+}
+
+h2 {
+    text-align: center;
+    font-family: "Dangrek";
+    margin-top: 100px;
+    margin-bottom: 50px;
+    font-size: 20px;
+    transition: color 1s;
+}
+
+table {
+    height: 80%;
+    width: 393px;
+    height: 550px;
+    border:10px;
+    border: none;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+td, tr {
+    padding-left:60px;
+    padding-right: 20px;
+    height: 20%;
+    border: none;
+    display: flex;
+    align-items: center;
+}
+
+img {
+    height: 90px;
+    width: 90px;
+    transition: height 1s, width 1s;
+}
+
+.leftImg {
+    float: left;
+}
+
+p {
+    font-family: "Dangrek";
+    font-size: 40px;
+    padding: 0px;
+    margin: 0px;
+}
+
+tr:hover {
+    cursor: pointer;
+}
