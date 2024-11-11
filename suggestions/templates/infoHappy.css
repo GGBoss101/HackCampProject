@@ -1,0 +1,61 @@
+body {
+    color: #283F2B;
+    background-image: url('../../static/suggBG.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 393px 852px;
+    background-position: center;
+}
+
+h2 {
+    text-align: center;
+    font-family: "Dangrek";
+    margin-top: 50px;
+    margin-bottom: 40px;
+    font-size: 20px;
+}
+
+.block {
+    display: flex;
+    height: 609px;
+    width: 336px;
+    background-color: #D8E4B9;
+    align-items: center;
+    justify-content: center;
+    border-radius: 45px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+    align-items: center;
+    flex-direction: column;
+}
+
+.blockText {
+    font-family: "Mada";
+    margin: 18px;
+    font-size: 20px;
+    text-align: center;
+}
+
+button {
+    margin-top: 25px;
+    width: 100px;
+    height: 50px;
+    font-family: "Dangrek";
+    font-size: 20px;
+    background-color: #48624A;
+    border-radius: 40px;
+    border-style: none;
+    transition: background-color 0.25s;
+}
+
+button:hover{
+    background-color:#6a856c;
+    cursor: pointer;
+}
+
+.buttonAlign{
+    text-align: center;
+    padding-bottom: 50px;
+}
+
