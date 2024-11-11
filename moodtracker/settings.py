@@ -41,8 +41,8 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "moodchooser",
-    # "suggestions",
     "home",
+    # "suggestions",
 ]
 
 MIDDLEWARE = [

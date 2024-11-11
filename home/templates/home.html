@@ -53,7 +53,7 @@
         <img class = "image" src = "" data-mood="{{ moods.SUN }}" >
     </div>
 <div style = "text-align: center;">
-    <button><p class = "buttonText">LOG TODAY'S MOOD</p></button>
+    <a href="{% url 'moodchooser:mood_chooser' %}"><button><p class = "buttonText">LOG TODAY'S MOOD</p></button></a>
 </div>
 
 <script>
