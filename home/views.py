@@ -4,5 +4,12 @@ from moodchooser.models import MoodEntry
 
 def home(response):
 
-    all_mood_entries = MoodEntry.objects.all
-    return render(response, "home.html", {"moods":all_mood_entries})
+    all_mood_entries = MoodEntry.objects.all()
+    moods_by_day = {}
+
+    for item in all_mood_entries:
+        moods_by_day.update({item.date.strftime('%a').upper() : item.mood})
+
+
+
+    return render(response, "home.html", {"moods":moods_by_day})

@@ -10,45 +10,49 @@
     <title>Home</title>
 </head>
 <body>
+    <p>{{ moods }}</p>
+    {% for item in moods %}
+        <p>{{ time.date }}</p>
+    {% endfor %}
     <div class = "block">
         <div class = "innerBlock">
-            <p class = "blockText">MON</p>
+            <p class = "blockText" data-mood="{{ moods.get('MON') }}">MON</p>
         </div>
         <img class = "image" src = "{% static 'Angry.svg' %}">
     </div>
     <div class = "block">
         <div class = "innerBlock">
-            <p class = "blockText">TUE</p>
+            <p class = "blockText" data-mood="{{ moods.get('TUE') }}" >TUE</p>
         </div>
         <img class = "image" src = "{% static 'Angry.svg' %}">
     </div>
     <div class = "block">
         <div class = "innerBlock">
-            <p class = "blockText">WED</p>
+            <p class = "blockText" data-mood="{{ moods.get('WED') }}">WED</p>
         </div>
         <img class = "image" src = "{% static 'Angry.svg' %}">
     </div>
     <div class = "block">
         <div class = "innerBlock">
-            <p class = "blockText">THU</p>
+            <p class = "blockText" data-mood="{{ moods.get('THU') }}">THU</p>
         </div>
         <img class = "image" src = "{% static 'Angry.svg' %}">
     </div>
     <div class = "block">
         <div class = "innerBlock">
-            <p class = "blockText">FRI</p>
+            <p class = "blockText" data-mood="{{ moods.get('FRI') }}">FRI</p>
         </div>
         <img class = "image" src = "{% static 'Angry.svg' %}">
     </div>
     <div class = "block">
         <div class = "innerBlock">
-            <p class = "blockText">SAT</p>
+            <p class = "blockText" data-mood="{{ moods.get('SAT') }}">SAT</p>
         </div>
         <img class = "image" src = "{% static 'Angry.svg' %}">
     </div>
     <div class = "block">
         <div class = "innerBlock">
-            <p class = "blockText">SUN</p>
+            <p class = "blockText" data-mood="{{ moods.get('SUN') }}">SUN</p>
         </div>
         <img class = "image" src = "{% static 'Angry.svg' %}">
     </div>
