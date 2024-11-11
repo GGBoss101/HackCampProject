@@ -10,54 +10,81 @@
     <title>Home</title>
 </head>
 <body>
+    
+    <p>{{ moods.SUN }}</p>
+    <p>{{ moods.MON }}</p>
     <p>{{ moods }}</p>
     {% for item in moods %}
         <p>{{ time.date }}</p>
     {% endfor %}
+    
     <div class = "block">
         <div class = "innerBlock">
-            <p class = "blockText" data-mood="{{ moods.get('MON') }}">MON</p>
+            <p class = "blockText">MON</p>
         </div>
-        <img class = "image" src = "{% static 'Angry.svg' %}">
+        <img class = "image" src = "{% static 'Angry.svg' %}" data-mood="{{ moods.MON }}">
     </div>
     <div class = "block">
         <div class = "innerBlock">
-            <p class = "blockText" data-mood="{{ moods.get('TUE') }}" >TUE</p>
+            <p class = "blockText" >TUE</p>
         </div>
-        <img class = "image" src = "{% static 'Angry.svg' %}">
+        <img class = "image" src = "{% static 'Angry.svg' %}" data-mood="{{ moods.TUE }}">
     </div>
     <div class = "block">
         <div class = "innerBlock">
-            <p class = "blockText" data-mood="{{ moods.get('WED') }}">WED</p>
+            <p class = "blockText">WED</p>
         </div>
-        <img class = "image" src = "{% static 'Angry.svg' %}">
+        <img class = "image" src = "{% static 'Angry.svg' %}" data-mood="{{ moods.WED }}">
     </div>
     <div class = "block">
         <div class = "innerBlock">
-            <p class = "blockText" data-mood="{{ moods.get('THU') }}">THU</p>
+            <p class = "blockText">THU</p>
         </div>
-        <img class = "image" src = "{% static 'Angry.svg' %}">
+        <img class = "image" src = "{% static 'Angry.svg' %}" data-mood="{{ moods.THU }}">
     </div>
     <div class = "block">
         <div class = "innerBlock">
-            <p class = "blockText" data-mood="{{ moods.get('FRI') }}">FRI</p>
+            <p class = "blockText">FRI</p>
         </div>
-        <img class = "image" src = "{% static 'Angry.svg' %}">
+        <img class = "image" src = "{% static 'Angry.svg' %}" data-mood="{{ moods.FRI }}">
     </div>
     <div class = "block">
         <div class = "innerBlock">
-            <p class = "blockText" data-mood="{{ moods.get('SAT') }}">SAT</p>
+            <p class = "blockText">SAT</p>
         </div>
-        <img class = "image" src = "{% static 'Angry.svg' %}">
+        <img class = "image" src = "{% static 'Angry.svg' %}" data-mood="{{ moods.SAT }}">
     </div>
     <div class = "block">
         <div class = "innerBlock">
-            <p class = "blockText" data-mood="{{ moods.get('SUN') }}">SUN</p>
+            <p class = "blockText">SUN</p>
         </div>
-        <img class = "image" src = "{% static 'Angry.svg' %}">
+        <img class = "image" src = "{% static 'Angry.svg' %}" data-mood="{{ moods.SUN }}" >
     </div>
 <div style = "text-align: center;">
-    <button><p class = "buttonText">LOG TODAY'S MOOD</p></button>
+    <button><p class = "buttonText" onclick = "changePic()">LOG TODAY'S MOOD</p></button>
 </div>
+
+<script>
+    function changePic() {
+        images = document.getElementsByClassName("image");
+        for (i = 0; i < 7; i++) {
+            if (images[i].dataset.mood == "H") {
+                images[i].src = "{% static 'Happy.svg' %}";
+            } else if (images[i].dataset.mood == "S") {
+                images[i].src = "{% static 'Sad.svg' %}";
+            } else if (images[i].dataset.mood == "C") {
+                images[i].src = "{% static 'Content.svg' %}";
+            } else if (images[i].dataset.mood == "T") {
+                images[i].src = "{% static 'Stressed.svg' %}";
+            } else if (images[i].dataset.mood == "A") {
+                images[i].src = "{% static 'Angry.svg' %}";
+            } else {
+                images[i].style.visibility = "hidden";
+            }
+        }
+    }
+    </script>
+    </body>
+    </html>
 </body>
 </html>
