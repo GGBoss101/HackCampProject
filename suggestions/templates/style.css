@@ -1,5 +1,10 @@
 body {
     color: #283F2B;
+    background-image: url('../../static/suggBG.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 393px 852px;
+    background-position: center;
 }
 
 h2 {
